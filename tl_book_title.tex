@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{paralist}
+\usepackage[round]{natbib}
+\usepackage{sectsty}
+\usepackage{gensymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{multirow,booktabs}
+\newcommand{\truncateit}[1]{\truncate{0.8\textwidth}{#1}}
+\newcommand{\scititle}[1]{\title[\truncateit{#1}]{#1}} 
+\usepackage[parfill]{parskip}
+\usepackage[final]{pdfpages}
+
+% Typeface
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+  \setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \renewcommand{\familydefault}{\sfdefault}
+  \usepackage{helvet}
+\fi
+\chapterfont{\Large} % \sffamily
+
+% Title page
+\usepackage{xcolor}
+\definecolor{titlepagecolor}{cmyk}{0,0,0,0}
+\definecolor{namecolor}{cmyk}{0,0,0,1} 
+\definecolor{chaptertitlepagecolor}{cmyk}{0,0,0,0.9}
+\definecolor{chapternamecolor}{cmyk}{0,0,0,0.3}  
+
+\begin{document}
+
+% ---------------------------------------------- TITLE PAGE ----------------------------------------------
+
+\begin{titlepage}
+\newgeometry{left=7.5cm} 
+\pagecolor{chaptertitlepagecolor}
+\noindent
+\color{white}
+%\textbf{}
+\large
+%\textcolor{chapternamecolor}
+{\textsf{Tangible Modeling with Open Source GIS}}\\ 
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+\par
+\noindent
+\textcolor{chapternamecolor}
+{\textsf{Springer 2015}}\vfill
+%\noindent
+%{\huge \textsf{Literature review}}
+%\vskip\baselineskip
+%\noindent
+%\textcolor{chapternamecolor}{\textsf{Tangible Landscape}}
+\end{titlepage}
+\restoregeometry % restores the geometry
+\pagecolor{white}
+
+% ---------------------------------------------- AUTHORSHIP ----------------------------------------------
+\begin{titlepage}
+\center{\large \textsf{Contribution}}
+\vspace{1em}
+
+\begin{quote}
+This book was a collaborative effort with my colleagues 
+in the NCSU Open Source Geospatial Research and Education Lab
+(\url{http://geospatial.ncsu.edu/osgeorel/})
+Anna Petrasova, Vaclav Petras, and Helena Mitasova.
+I was the sole author of  chapter 1 and chapter 3. 
+I co-authored chapter 7 and chapter 10 being responsible for approximately half of the content.
+I also contributed extensively to the Appendix being responsible again for approximately half of the content.
+My co-authors and I extensively edited the content, imagery, style, and structure of the entire book. 
+\end{quote}
+\end{titlepage}
+\restoregeometry % restores the geometry
+\pagecolor{white}
+
+\end{document}
+
