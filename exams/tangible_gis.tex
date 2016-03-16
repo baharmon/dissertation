@@ -55,69 +55,135 @@
 
 % You introduce Tangible landscape with "imagine holding GIS in your hands" statement. Elaborate on the coupling of tangible interface with GIS: what role GIS plays to support tangible interaction, what GIS functionality is needed to detect the tangible input and what provides the realtime feedback. Discuss the current bottlenecks and challenges that need to be addressed to fulfill the Tangible Landscape potential and propose innovative solutions.
 
+%`The physical state of tangibles embodies key aspects of the digital state of an underlying computation' \citep{Ishii2008}
 
+\paragraph{Coupling physical models with GIS}
 
-% Imagine being able to hold a GIS in your hands, feeling the shape of the earth, sculpting its topography, and directing the flow of water. We present Tangible Landscape, an open source tangible interface powered by GRASS GIS. Tangible Landscape physically, interactively manifests geospatial data so that you can naturally feel it, see it, and shape it. This makes GIS far more intuitive and accessible for beginners, empowers geospatial experts, and creates new exciting opportunities for developers - like gaming with GIS. In this talk we will introduce tangible interaction and why it matters for all things spatial, demonstrate a few applications such as disaster management and gaming, discuss how to digitally fabricate models, and show you how to implement and build your own system. 
-
-
-
-
-% coupling
-
-
-
+% coupling as tangible bits
+In a seminal paper \citeauthor{Ishii1997} envisioned tangible user interfaces that would 
+`bridge the gap between cyberspace and the physical environment by making digital information (bits) tangible' \citeyearpar{Ishii1997}.
+They described `tangible bits' as `the coupling of bits with graspable physical objects' \citep{Ishii1997}. 
+%
 % coupling with GIS
+Tangible interfaces like 
+Urp \citep{Underkoffler1999}, Illuminating Clay \citep{Piper2002a}, and SandScape \citep{Ratti2004} 
+enriched physical models of urban spaces and landscapes with spatial analyses and simulations 
+like wind direction, cast shadow, slope, aspect, curvature, and water direction
+in order to enhance and streamline design processes. 
+%
+Many of the analyses used in Illuminating Clay were adapted from GRASS GIS \citep{Piper2002a}. 
+and eventually 
+Illuminating Clay was coupled with GRASS GIS 
+to draw on its extensive libraries for spatial compuation. 
+The aim of coupling Illuminating Clay with GRASS GIS was to 
+`explore relationships that occur between different terrains, the physical parameters of terrains, and the landscape processes that occur in these terrains' \citep{Mitasova2006}. 
+%
+This research to couple a physical landscape model with GRASS GIS led to the development of 
+the Tangible Geospatial Modeling System \citep{Tateosian2010} and Tangible Landscape \citep{Petrasova2014,Petrasova2015}.
+
+% why
+There are many reasons for coupling a physical model with a GIS -- for developing a tangible interface for a GIS. 
+%
+The tangible interface enables intuitive digital sculpting, 
+streamlines design processes by seamlessly integrating analog and digital workflows, and 
+improves collaboration and communication by enabling multiple users to simultaneously interact 
+in a natural way \citep{Ratti2004}. 
+%
+The GIS provides the extensive libraries for geospatial databasing, processing, analysis, modeling, simulation, and visualization 
+needed to address real world problems \citep{Tateosian2010}. 
+% sculpting
+A tangible interface for a GIS that enables intuitive digital sculpting while providing analytical or simulated feedback would allow users to dynamically explore how topographic form influences landscape processes \citep{Mitasova2006}. 
+%
+
+% GIS functionality
+To couple a physical model with a GIS
+the physical model needs to be digitized and imported into the GIS
+and then models,  analyses, and simulations need to be output as feedback. 
+% GIS functionality for tangible input
+Once a physical model has been 3D scanned as a point cloud it can be imported into GIS. 
+GIS functionality for handling tangible input could include 
+georeferencing, point cloud processing and importing, binning or interpolation, and object detection. 
+% GIS functionality for real-time feedback
+Once the tangible input has been imported into GIS
+it can be used in geospatial models, analyses, and simulations.  
+GIS have extensive libraries for geospatial modeling, analysis, and simulation
+including statistical analysis, terrain modeling, terrain analysis (including slope, aspect, curvature, and landform recognition), cut-fill analysis, volumetric modeling, time series analysis, solar irradiation modeling, hydrological modeling, water flow simulation, sediment flow and erosion simulation, landscape fragmentation analysis, landscape change modeling, least cost path analysis, and network analysis and optimization. 
+%
+These libraries support landscape planning applications including stormwater management, flood control, landscape management and erosion control, trail planning, viewshed analysis and visual impact assessment, and the assessment of solar potential. 
+They also support landscape change applications including wildfire management, disease spread management, urban growth, and sea level rise adaption.
+%
+GIS also have libraries for visualization including 2D and 3D cartographic rendering, graphs, and animation that enable graphical feedback.
 
 
-	% detection of tangible input with GIS
-
-	% what sort of GIS feedback
 
 
-
-
-
-\paragraph{Challenges}
+\paragraph{Challenges and future work}
 % challenges
 	% theory unproven
-	% 2 way tangible interaction
+	% 3 way tangible interaction
 	% point of view: human perception of the landscape
-
-Challenges to the development of Tangible Landscape...
-
-% theory unproven
-Theoretically Tangible Landscape should enable natural and collaborative interaction with a GIS by coupling a physical and digital geospatial models.
-Natural interaction with geospatial models should enhance spatial cognition and encourage spatial learning. 
-This should be empirically tested in experiments and case studies
-so that we can critique and develop the theory grounding Tangible Landscape, 
-identify cognitive challenges, and 
-improve the design.  
-
-% 2 way tangible interaction
-
-
-
-
-
-
-
-
-
-%point of view: human perception of the landscape
-
-
-
-
-
-
-
-
-\paragraph{Future work}
 % innovations 
 	% empirically, experimentally testing theory in order to improve the design
 		% spatial cognition and other cognitive, affective, metacognitive, and motivational (CAMM) processes
 	% digital fabrication, live data, and earthmoving
 	% VR
+
+% theory unproven
+Theoretically Tangible Landscape should enable natural and collaborative interaction with a GIS by coupling physical and digital geospatial models.
+Natural interaction with geospatial models should enhance spatial cognition and encourage spatial learning. 
+This should be empirically tested in experiments and case studies 
+so that we can critique and develop the theory grounding Tangible Landscape, 
+identify cognitive challenges, and 
+improve the design.  
+
+
+% empirically, experimentally testing theory in order to improve the design
+
+
+
+% spatial cognition and other cognitive, affective, metacognitive, and motivational (CAMM) processes
+
+
+
+%point of view: human perception of the landscape
+Tangible Landscape's physical model, augmented with projected graphics, only affords a bird's eye view of the modeled landscape. 
+With a bird's eye view of a scale model one can not get a sense of how the landscape would look when one is there. 
+While 3D renderings can show how the landscape would look from a viewpoint, immersive technologies could give a richer impression of the space. 
+Virtual reality headsets with interactive 3D scenes could be integrated with Tangible Landscape so that users can explore and experience the modeled landscape at a human scale. 
+
+% 2 way tangible interaction
+Tangible interfaces like Tangible Landscape have two feedback loops -- 
+there is passive, kinaesthetic feedback from grasping the physical model 
+and graphical feedback from computation.
+%
+This double interaction loop could be enriched by a third form of feedback, 
+by computationally transforming the physical model
+for active, kinaesthetic feedback 
+\citep{Ishii2008}. 
+%
+While there is ongoing research into actuated shape-changing displays like Relief \citep{Leithinger2010}, 
+they are expensive to build and maintain and 
+the size of the actuators limits the spatial resolution making the surface discrete rather than continuous. 
+%
+% in-situ digital fabrication
+I instead propose to integrate robotic fabrication technologies into Tangible Landscape 
+in order to computationally transform the physical model with high precision.
+A robot mounted beside Tangible Landscape could precisely manufacture changes to the physical model using computer numerical control milling, 3D printing, and casting 
+based on geospatial modeling and simulation.
+While it would take substantial time to fabricate new models using digital fabrication technologies, small changes could be made in near real-time. 
+%
+
+% coupling TL with the landscape
+Digital fabrication technologies could also couple Tangible Landscape with the real world landscape being modeling.
+Live, real-time data about the landscape could be collected and streamed from sources like UAV flights, lidar stations, monitoring stations, and embedded sensors. With this streaming data the robot mounted beside Tangible Landscape could automatically transform the physical model representing the landscape in near real-time response to changes in the landscape. 
+%
+This would give us a live, tangible representation of a landscape that could help us to understand its processes 
+and support near real-time decision making. 
+%
+Tangible Landscape could also be integrated with digital fabrication in the field -- 
+with computationally driven, location-aware earthmovers -- 
+to directly transform the landscape being modeled. 
+
 
 
 
