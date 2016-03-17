@@ -72,7 +72,7 @@ digital fabrication, robotics, and
 human-computer interaction. 
 %
 Point clouds are used often in tangible interfaces, 
-a type of human-computer interaction that aims to physically manifest digital data, 
+a type of human-computer interaction that aims to physically manifest digital data --
 to digitally model physical objects, coupling them with their digital counterparts. 
 
 % point clouds in TL
@@ -145,8 +145,11 @@ Structured light depth sensors like the first generation Kinect
 project a known pattern of infrared (IR) light onto a scene or object 
 while scanning the scene with an IR sensor
 to capture the deformation of the pattern of IR light. 
-The depth of the scene can be interpolated from the deformation of the pattern
-\citep{Hansard2013}. 
+The depth of the scene can be interpolated from the deformation of the pattern. %\citep{Hansard2013}. 
+%
+% errors
+Structured light depth sensing suffers from data loss -- holes in the reconstruction -- 
+at the boundary of objects and with transparent or specular materials \citep{Hansard2013}. 
 %
 % kinect
 The first generation Kinect combines an IR projector, an IR sensor, and a color sensor 
@@ -157,9 +160,7 @@ The first generation Kinect can capture depth images
 at 0.8 - 3.5 m range 
 with 3 mm xy resolution and 10 mm z resolution at a 2 m distance. 
 %
-% errors
-Structured light depth sensing suffers from data loss -- holes in the reconstruction -- 
-at the boundary of objects and with transparent or specular materials \citep{Hansard2013}. 
+
 
 \paragraph{Time-of-flight}
 In time-of-flight depth sensing
@@ -173,10 +174,10 @@ with a range of 0.8 - 4.2 m, a maximum depth resolution of 512 × 424 pixels, an
 % errors
 Time-of-flight depth sensing suffers from data drift -- offsets in depth values -- 
 at the boundary of objects and with transparent materials 
-and from and data loss with specular materials.
+and from data loss with specular materials.
 %
 The geometry, color, and material of the scene or object cause 
-variations in the phase and amplitude of reflected IR light giving rise to errors in time-of-flight sensing. 
+variations in the phase and amplitude of reflected IR light giving rise to errors. 
 %
 Systematic errors include noise caused by short integration times
 and ambiguity caused by variations in amplitude due to color. 
