@@ -168,3 +168,11 @@ Thumbs.db
 *.kilepr
 *.backup
 *~
+
+# Directories #
+###################
+archive/
+
+# Generated files #
+###################
+#*.pdf
